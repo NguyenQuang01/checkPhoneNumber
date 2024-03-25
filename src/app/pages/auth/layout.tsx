@@ -2,8 +2,6 @@
 import { ReactNode } from "react";
 import React from "react";
 import { Inter } from "next/font/google";
-import "@/app/globals.scss";
-import MenuMain from "@/app/components/Layout/MenuMain";
 const inter = Inter({ subsets: ["latin"] });
 
 interface DefaultLayoutProps {
@@ -24,9 +22,8 @@ const DefaultLayout: React.FC<DefaultLayoutProps> = ({ children }) => {
                 <title>Jaxtina dashboard</title>
             </head>
             <body className={inter.className}>
-                <div className="flex  overflow-hidden ">
-                    <MenuMain />
-                    <div className=" h-screen overflow-hidden w-full pl-10">
+                <div className="flex">
+                    <div className="flex h-screen overflow-hidden w-full ">
                         {children}
                     </div>
                 </div>

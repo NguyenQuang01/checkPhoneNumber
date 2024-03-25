@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "./assets/style/globals.scss";
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
+}
+
+body {
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+            to bottom,
+            transparent,
+            rgb(var(--background-end-rgb))
+        )
+        rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}
+body {
+    background-color: #f3ebf6;
+    font-family: "Ubuntu", sans-serif;
+}
+/* HTML: <div class="loader"></div> */
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 50px;
+    aspect-ratio: 1;
+    color: #f03355;
+    --_c: no-repeat radial-gradient(farthest-side, currentColor 92%, #0000);
+    background: var(--_c) 50% 0 /12px 12px, var(--_c) 50% 100%/12px 12px,
+        var(--_c) 100% 50%/12px 12px, var(--_c) 0 50%/12px 12px,
+        var(--_c) 50% 50%/12px 12px,
+        conic-gradient(from 90deg at 4px 4px, #0000 90deg, currentColor 0) -4px -4px /
+            calc(50% + 2px) calc(50% + 2px);
+    animation: l8 1s infinite linear;
+}
+@keyframes l8 {
+    to {
+        transform: rotate(0.5turn);
+    }
+}
+@keyframes l23 {
+    100% {
+        transform: rotate(1turn);
+    }
+}
+.backgroundJaxtiana {
+    background-image: url("https://scontent.fhan2-4.fna.fbcdn.net/v/t39.30808-6/428349698_784802073693397_3937774698827254397_n.png?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=VtMFZk6dVbAAX8EWNMM&_nc_ht=scontent.fhan2-4.fna&oh=00_AfBLpp36prZd4THjcgy1Nve7k6v8-ni_25X6K3EoUex4iA&oe=65F62172");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.main {
+    background-color: #ffffff;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+}
+
+.sign {
+    padding-top: 40px;
+    color: #8c55aa;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.un {
+    width: 76%;
+    color: rgb(38, 50, 56);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: rgba(136, 126, 126, 0.04);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.02);
+    margin-bottom: 50px;
+    margin-left: 46px;
+    text-align: center;
+    margin-bottom: 27px;
+    font-family: "Ubuntu", sans-serif;
+}
+
+form.form1 {
+    padding-top: 40px;
+}
+
+.pass {
+    width: 76%;
+    color: rgb(38, 50, 56);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: rgba(136, 126, 126, 0.04);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.02);
+    margin-bottom: 50px;
+    margin-left: 46px;
+    text-align: center;
+    margin-bottom: 27px;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.un:focus,
+.pass:focus {
+    border: 2px solid rgba(0, 0, 0, 0.18) !important;
+}
+
+.submit {
+    cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    background: linear-gradient(to right, #9c27b0, #e040fb);
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: "Ubuntu", sans-serif;
+    margin-left: 35%;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+.forgot {
+    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+    color: #e1bee7;
+    padding-top: 15px;
+}
+
+a {
+    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+    /* color: #e1bee7; */
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    .main {
+        border-radius: 0px;
+    }
+}
