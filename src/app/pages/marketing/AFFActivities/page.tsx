@@ -85,8 +85,20 @@ const AffActivities = () => {
         message.error(`vui lòng điền mã code`);
     };
     const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        if (e.target.files) {
-            fetchData(e.target.files[0]);
+        if (code) {
+            if (e.target.files) {
+                fetchData(e.target.files[0]);
+                return;
+            }
+        }
+        message.error(`vui lòng điền mã code`);
+        const fileInput = document.getElementById(
+            "file"
+        ) as HTMLInputElement | null;
+        if (fileInput !== null) {
+            fileInput.value = "";
+            setIsSuccess(false);
+            setDataSource([]); // Xóa giá trị của input file
         }
     };
     const clearFileInputValue = () => {
