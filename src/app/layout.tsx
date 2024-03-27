@@ -4,6 +4,7 @@ import React from "react";
 import { Inter } from "next/font/google";
 import "@/app/globals.scss";
 import MenuMain from "@/app/components/Layout/MenuMain";
+import StyledComponentsRegistry from "./lib/antd.registry";
 const inter = Inter({ subsets: ["latin"] });
 
 interface DefaultLayoutProps {
@@ -24,12 +25,15 @@ const DefaultLayout: React.FC<DefaultLayoutProps> = ({ children }) => {
                 <title>Jaxtina dashboard</title>
             </head>
             <body className={inter.className}>
-                <div className="flex  overflow-hidden ">
-                    <MenuMain />
-                    <div className=" h-screen overflow-hidden w-full pl-10">
-                        {children}
+                <StyledComponentsRegistry>
+                    {" "}
+                    <div className="flex  overflow-hidden ">
+                        <MenuMain />
+                        <div className=" h-screen overflow-hidden w-full pl-10">
+                            {children}
+                        </div>
                     </div>
-                </div>
+                </StyledComponentsRegistry>
             </body>
         </html>
     );

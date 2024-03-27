@@ -1,7 +1,7 @@
 import axios from 'axios'
 
-const baseURL ='http://localhost:4303/v1/'
-// const baseURL ='http://api.dashbroad.jaxtinagroup.com.vn/v1/'
+// const baseURL ='http://localhost:4303/v1/'
+const baseURL ='http://api.dashbroad.jaxtinagroup.com.vn/v1/'
 const apiConfig = axios.create({
   baseURL: baseURL,
   headers: {

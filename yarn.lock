@@ -19,10 +19,10 @@
   dependencies:
     "@ctrl/tinycolor" "^3.6.1"
 
-"@ant-design/cssinjs@^1.18.4":
-  "integrity" "sha512-IrUAOj5TYuMG556C9gdbFuOrigyhzhU5ZYpWb3gYTxAwymVqRbvLzFCZg6OsjLBR6GhzcxYF3AhxKmjB+rA2xA=="
-  "resolved" "https://registry.npmjs.org/@ant-design/cssinjs/-/cssinjs-1.18.4.tgz"
-  "version" "1.18.4"
+"@ant-design/cssinjs@^1.18.4", "@ant-design/cssinjs@^1.18.5":
+  "integrity" "sha512-Ub4n3d+MAX/qtE5S9PM8iOn5ocU7GUAIC4Adc2X8UCMXnsRRfpJBHsBdtQ1qoAuaQ7lU2M1BTCuJ+fkv4fOWiw=="
+  "resolved" "https://registry.npmjs.org/@ant-design/cssinjs/-/cssinjs-1.18.5.tgz"
+  "version" "1.18.5"
   dependencies:
     "@babel/runtime" "^7.11.1"
     "@emotion/hash" "^0.8.0"

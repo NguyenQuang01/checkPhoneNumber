@@ -54,24 +54,7 @@ const AffActivities = () => {
         setIsSuccess(false);
         message.error(`Hết hạn code`);
     };
-    const props: UploadProps = {
-        name: "file",
-        action: "https://run.mocky.io/v3/435e224c-44fb-4773-9faf-380c5e6a2188",
-        headers: {
-            authorization: "authorization-text",
-        },
-        onChange(info) {
-            if (code) {
-                if (info.file.status === "done") {
-                    fetchData(info.file.originFileObj);
-                } else if (info.file.status === "error") {
-                    message.error(`${info.file.name} file upload failed.`);
-                }
-            } else {
-                message.error(`vui lòng điền mã code`);
-            }
-        },
-    };
+
     const exportExcel = () => {
         if (excel) downloadFileExcel(excel, "nguyễn trung quang");
     };
@@ -101,7 +84,21 @@ const AffActivities = () => {
         }
         message.error(`vui lòng điền mã code`);
     };
-
+    const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        if (e.target.files) {
+            fetchData(e.target.files[0]);
+        }
+    };
+    const clearFileInputValue = () => {
+        const fileInput = document.getElementById(
+            "file"
+        ) as HTMLInputElement | null;
+        if (fileInput !== null) {
+            fileInput.value = "";
+            setIsSuccess(false);
+            setDataSource([]); // Xóa giá trị của input file
+        }
+    };
     return (
         <div className="pt-10 pr-10 ">
             <div className="my-5  ">
@@ -113,11 +110,15 @@ const AffActivities = () => {
                             className="mr-2 w-40"
                             onChange={changeCode}
                         />
-                        <Upload {...props} className="list-excel">
-                            <Button icon={<UploadOutlined />}>
-                                Import file excel
-                            </Button>
-                        </Upload>
+
+                        <div className=" mt-2">
+                            <input
+                                id="file"
+                                type="file"
+                                onChange={handleFileChange}
+                            />
+                            <Button onClick={clearFileInputValue}>Reset</Button>
+                        </div>
                     </div>
                     <Search
                         placeholder="Tìm số điện thoại trùng"

@@ -13,90 +13,90 @@ import Image from "next/image";
 import { Menu } from "antd";
 import dynamic from "next/dynamic";
 const items: MenuProps["items"] = [
-    {
-        label: "Dashboard Học Thuật",
-        key: "1",
-        icon: <AreaChartOutlined />,
-        children: [
-            {
-                label: "Kết quả học tập",
-                key: "11",
-                children: [
-                    {
-                        label: (
-                            <Link href="/pages/dashboard/learningBasedOnTheBasis">
-                                Cơ sở
-                            </Link>
-                        ),
-                        key: "111",
-                    },
-                    {
-                        label: (
-                            <Link href="/pages/dashboard/studentsLearningByMonth">
-                                HV theo tháng
-                            </Link>
-                        ),
-                        key: "112",
-                    },
-                ],
-            },
-            {
-                label: "Giáo viên",
-                key: "22",
-                children: [
-                    {
-                        label: "Năng lực GV ",
-                        key: "221",
-                    },
-                    {
-                        label: "Số lượng GV từng cs",
-                        key: "222",
-                    },
-                ],
-            },
-            {
-                label: "Học viên",
-                key: "33",
-                children: [
-                    {
-                        label: "SL HV theo khóa",
-                        key: "331",
-                    },
-                    {
-                        label: "SL HV theo cs",
-                        key: "332",
-                    },
-                    {
-                        label: "SL HV chú ý theo cs",
-                        key: "333",
-                    },
-                ],
-            },
-            {
-                label: " Sự hài lòng của hv",
+    // {
+    //     label: "Dashboard Học Thuật",
+    //     key: "1",
+    //     icon: <AreaChartOutlined />,
+    //     children: [
+    //         {
+    //             label: "Kết quả học tập",
+    //             key: "11",
+    //             children: [
+    //                 {
+    //                     label: (
+    //                         <Link href="/pages/dashboard/learningBasedOnTheBasis">
+    //                             Cơ sở
+    //                         </Link>
+    //                     ),
+    //                     key: "111",
+    //                 },
+    //                 {
+    //                     label: (
+    //                         <Link href="/pages/dashboard/studentsLearningByMonth">
+    //                             HV theo tháng
+    //                         </Link>
+    //                     ),
+    //                     key: "112",
+    //                 },
+    //             ],
+    //         },
+    //         {
+    //             label: "Giáo viên",
+    //             key: "22",
+    //             children: [
+    //                 {
+    //                     label: "Năng lực GV ",
+    //                     key: "221",
+    //                 },
+    //                 {
+    //                     label: "Số lượng GV từng cs",
+    //                     key: "222",
+    //                 },
+    //             ],
+    //         },
+    //         {
+    //             label: "Học viên",
+    //             key: "33",
+    //             children: [
+    //                 {
+    //                     label: "SL HV theo khóa",
+    //                     key: "331",
+    //                 },
+    //                 {
+    //                     label: "SL HV theo cs",
+    //                     key: "332",
+    //                 },
+    //                 {
+    //                     label: "SL HV chú ý theo cs",
+    //                     key: "333",
+    //                 },
+    //             ],
+    //         },
+    //         {
+    //             label: " Sự hài lòng của hv",
 
-                key: "44",
-                children: [
-                    {
-                        label: (
-                            <Link href="/pages/dashboard/learningBasedOnTheBasis">
-                                Sự vụ theo tháng
-                            </Link>
-                        ),
-                        key: "441",
-                    },
-                    {
-                        label: (
-                            <Link href="/pages/dashboard/GV">
-                                Khảo sát độ hài lòng
-                            </Link>
-                        ),
-                        key: "442",
-                    },
-                ],
-            },
-        ],
-    },
+    //             key: "44",
+    //             children: [
+    //                 {
+    //                     label: (
+    //                         <Link href="/pages/dashboard/learningBasedOnTheBasis">
+    //                             Sự vụ theo tháng
+    //                         </Link>
+    //                     ),
+    //                     key: "441",
+    //                 },
+    //                 {
+    //                     label: (
+    //                         <Link href="/pages/dashboard/GV">
+    //                             Khảo sát độ hài lòng
+    //                         </Link>
+    //                     ),
+    //                     key: "442",
+    //                 },
+    //             ],
+    //         },
+    //     ],
+    // },
     {
         label: "Dashboard Marketing",
         key: "2",
